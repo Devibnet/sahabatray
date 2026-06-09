@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quotes Penyemangat - Cerita.In</title>
+  <title>Quotes Penyemangat — Cerita.In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigasi utama -->
+
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">Cerita<span class="in">.In</span></a>
+      <button class="nav-toggle" aria-label="Menu">
+        <i class="fa fa-bars"></i>
+      </button>
       <div class="nav-links">
-        <a href="index.html" title="Beranda"><i class="fa fa-home"></i><span class="nav-text">Beranda</span></a>
-        <a href="konselor.html" title="Konselor"><i class="fa fa-user-friends"></i><span class="nav-text">Konselor</span></a>
-        <a href="artikel.html" title="Artikel"><i class="fa fa-newspaper"></i><span class="nav-text">Artikel</span></a>
-        <a href="quotes.html" class="active" title="Quotes"><i class="fa fa-quote-left"></i><span class="nav-text">Quotes</span></a>
+        <a href="index.html"><i class="fa fa-home"></i><span class="nav-text">Beranda</span></a>
+        <a href="konselor.html"><i class="fa fa-user-friends"></i><span class="nav-text">Konselor</span></a>
+        <a href="artikel.html"><i class="fa fa-newspaper"></i><span class="nav-text">Artikel</span></a>
+        <a href="quotes.html" class="active"><i class="fa fa-quote-left"></i><span class="nav-text">Quotes</span></a>
       </div>
     </div>
   </nav>
 
-  <!-- Quotes Penyemangat -->
-  <section class="section fade-in">
-    <div class="container quotes-container">
-      <h2 class="section-title">Quotes Penyemangat</h2>
-      <div class="quotes-card-outer">
-        <div class="quotes-wow-card">
-          <div class="quotes-emoji" id="quotes-emoji">😺</div>
-          <p id="quote-text" class="quotes-text">Loading...</p>
-          <button class="btn btn-secondary quotes-btn" id="new-quote-btn">
-            <span class="quotes-btn-icon">🔄</span> Tampilkan Kutipan Baru
-          </button>
-          <!-- Dekorasi SVG lucu -->
-          <div class="quotes-svg-dekor quotes-svg-dekor-1"><svg width="60" height="60"><circle cx="30" cy="30" r="30" fill="#a8e6cf"/></svg></div>
-          <div class="quotes-svg-dekor quotes-svg-dekor-2"><svg width="40" height="40"><polygon points="20,0 40,40 0,40" fill="#6ec1e4"/></svg></div>
-        </div>
+  <section class="quotes-section">
+    <div class="quotes-container">
+      <div class="section-header reveal">
+        <div class="section-tag">Quotes</div>
+        <h2 class="section-title">Quotes <span class="highlight">Penyemangat</span></h2>
+        <p class="section-desc">Dapatkan kutipan motivasi secara acak setiap hari.</p>
+      </div>
+
+      <div class="quotes-card reveal">
+        <span class="quotes-emoji" id="quotes-emoji">😺</span>
+        <p class="quotes-text" id="quote-text" style="transition:all 0.4s var(--ease-out);">Loading...</p>
+        <button class="btn btn-outline quotes-btn" id="new-quote-btn">
+          <span class="quotes-btn-icon">🔄</span>
+          <span>Tampilkan Kutipan Baru</span>
+        </button>
       </div>
     </div>
   </section>
 
+  <footer class="footer">
+    <p>© 2025 Cerita.In — Semua hak dilindungi. Dibuat dengan <span style="color:var(--accent);">❤</span> untuk kesehatan mental remaja.</p>
+  </footer>
+
   <script src="scripts.js"></script>
 </body>
-</html> 
+</html>

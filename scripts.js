@@ -1,39 +1,93 @@
-// =====================
-// Cerita.In Main Script
-// =====================
+// ==========================================
+// Cerita.In — Enhanced Interactive Script
+// ==========================================
 
-// Data dummy konselor sebaya
+// --- Data ---
 const konselors = [
   {
     id: '1',
-    nama: 'Melda Yogiani',
-    foto: 'Foto/Melda.jpg',
+    nama: 'Sukkun Siregar',
+    foto: 'Foto/raygar.jpeg',
     minat: 'Self-love, Kecemasan, Persahabatan',
-    bio: 'Melda adalah konselor sebaya yang dikenal hangat dan penuh empati. Ia senang menjadi pendengar yang baik dan hadir untuk membantu remaja melewati berbagai tantangan hidup. Bagi Melda, setiap orang berhak merasa didengar, dimengerti, dan meraih kebahagiaan dalam hidupnya.',
+    bio: 'Sukkun adalah konselor sebaya yang dikenal hangat dan penuh empati. Ia senang menjadi pendengar yang baik dan hadir untuk membantu remaja melewati berbagai tantangan hidup. Bagi Sukkun, setiap orang berhak merasa didengar, dimengerti, dan meraih kebahagiaan dalam hidupnya.',
     usia: 20,
-    instagram: 'yogimelda'
+    instagram: '@raygar28_'
   },
   {
     id: '2',
-    nama: 'Angga Prabaswara',
-    foto: 'Foto/Angga.jpg',
+    nama: 'Silviana Darini',
+    foto: 'Foto/ana.jpeg',
     minat: 'Motivasi, Keluarga, Percaya Diri',
-    bio: 'Angga aktif di forum GenRe Buleleng dan senang berbagi tips seputar membangun kepercayaan diri. Ia dikenal sebagai pribadi yang ramah, mudah diajak bicara, dan selalu berusaha menjadi pendengar yang baik. Angga siap menjadi teman cerita yang suportif, hadir untuk mendengarkan tanpa menghakimi dan menemani dengan tulus.',
+    bio: 'Silviana aktif di forum GenRe Buleleng dan senang berbagi tips seputar membangun kepercayaan diri. Ia dikenal sebagai pribadi yang ramah, mudah diajak bicara, dan selalu berusaha menjadi pendengar yang baik. Silviana siap menjadi teman cerita yang suportif, hadir untuk mendengarkan tanpa menghakimi dan menemani dengan tulus.',
     usia: 20,
-    instagram: 'ib_angga11'
   },
   {
     id: '3',
-    nama: 'Listia Prasetya',
-    foto: 'Foto/Listya.jpg',
+    nama: 'Bayu Wiguna',
+    foto: 'Foto/bayu.jpeg',
     minat: 'Overthinking, Akademik, Hubungan',
-    bio: 'Listia memahami betul tantangan yang sering dihadapi remaja, mulai dari tekanan akademik hingga masalah dalam hubungan pertemanan atau asmara. Ia ingin menjadi tempat bercerita yang nyaman dan membantu remaja menemukan solusi yang sehat, positif, dan sesuai dengan diri mereka sendiri.',
+    bio: 'Bayu memahami betul tantangan yang sering dihadapi remaja, mulai dari tekanan akademik hingga masalah dalam hubungan pertemanan atau asmara. Ia ingin menjadi tempat bercerita yang nyaman dan membantu remaja menemukan solusi yang sehat, positif, dan sesuai dengan diri mereka sendiri.',
+    usia: 20,
+  },
+  {
+    id: '4',
+    nama: 'Komang Murniasih',
+    foto: 'Foto/murni.jpeg',
+    minat: 'mental health, pertemanan, kesehatan reproduksi',
+    bio: 'komang murniasih adalah seorang konselor yang memiliki pengalaman dalam membantu remaja menghadapi tekanan akademik dan masalah hubungan. Ia dikenal sebagai pribadi yang sabar, penuh pengertian, dan selalu berusaha memberikan dukungan yang positif. Komang siap menjadi teman cerita yang dapat diandalkan untuk mendengarkan dan memberikan solusi yang sehat bagi remaja.',
     usia: 19,
-    instagram: 'listyaprastya_'
+  },
+  {
+    id: '5',
+    nama: 'Dayana Mahendra',
+    foto: 'Foto/mahen.jpeg',
+    minat: 'kesehatan reproduksi, seksualitas,hubungan',
+    bio: 'Dayana adalah seorang konselor yang sudah berpengalaman dalam membantu remaja mengatasi kesehatan reprodusi remaja. Ia dikenal sebagai pribadi yang ramah, mudah diajak bicara, dan selalu berusaha menjadi pendengar yang baik. Dayana siap menjadi teman cerita yang suportif, hadir untuk mendengarkan tanpa menghakimi dan menemani dengan tulus.',
+    usia: 17,
+  },
+  {
+    id: '6',
+    nama: 'Melyn Agustin',
+    foto: 'Foto/melyn.jpeg',
+    minat: 'sharing cerita, kesehatan mental hubungan, lingkungan sosial',
+    bio: 'Melyn Agustin adalah seorang konselor yang memiliki pengalaman dalam membantu remaja menghadapi berbagai tantangan hidup. Ia dikenal sebagai pribadi yang sabar, penuh pengertian, dan selalu berusaha memberikan dukungan yang positif. Melyn siap menjadi teman cerita yang dapat diandalkan untuk mendengarkan dan memberikan solusi yang sehat bagi remaja.',
+    usia: 19,
+  },
+  {
+    id: '7',
+    nama: 'Ketut Putriani',
+    foto: 'Foto/putriani.jpeg',
+    minat: 'pressure akademik, pola hidup sehat, hubungan',
+    bio: 'Ketut Putriani adalah seorang konselor yang suka membantu remaja menghadapi tekanan akademik dan masalah hubungan. Ia dikenal sebagai pribadi yang sabar, penuh pengertian, dan selalu berusaha memberikan dukungan yang positif. Ketut siap menjadi teman cerita yang dapat diandalkan untuk mendengarkan dan memberikan solusi yang sehat bagi remaja.',
+    usia: 17,
+  },
+  {
+    id: '8',
+    nama: 'Ayu Nataya',
+    foto: 'Foto/nataya.jpeg',
+    minat: 'pacaran sehat, pencegahan pernikahan dini, napza',
+    bio: 'Ayu Nataya adalah seorang konselor yang memiliki berbagai pengalaman dalam membantu upaya pencegahan pernikahan dini dan napza',
+    usia: 18,
+  },
+  {
+    id: '9',
+    nama: 'Galang Okta',
+    foto: 'Foto/galang.jpeg',
+    minat: 'bullying, kesehatan mental, cyberbullying',
+    bio: 'Galang Okta adalah seorang konselor yang memiliki pengalaman dalam membantu menangani bullying',  
+    usia: 17,
+  },
+  {
+    id: '10',
+    nama: 'Jyoti Wedastri',
+    foto: 'Foto/jyoti.jpeg',
+    minat: 'Karir, pengembangan diri, perencanaan masa depan',
+    bio: 'jyoti wedastri adalah seorang konselor yang memiliki pengalaman dalam perencanaan karir dan pengambangan diri remaja',
+    usia: 17,
   }
 ];
 
-// Data dummy artikel
+
 const artikels = [
   {
     id: 'a1',
@@ -44,7 +98,7 @@ const artikels = [
   },
   {
     id: 'a2',
-    judul: 'Mengenal Self-Love, Cara Mencintai Diri agar Lebih Bahagia',
+    judul: 'Mengenal Self-Love, Cara Mencintai Diri agar Lebih Bahagia',
     gambar: 'Foto/Self Love.jpeg',
     deskripsi: 'Self-love penting untuk kesehatan mental. Bagaimana cara memulainya? Baca selengkapnya di sini.',
     link: 'https://www.siloamhospitals.com/informasi-siloam/artikel/apa-itu-self-love'
@@ -61,18 +115,17 @@ const artikels = [
     judul: '10 Cara Efektif Menjaga Kesehatan Mental Agar Tetap Bahagia',
     gambar: 'Foto/Mental.jpg',
     deskripsi: 'Kesehatan mental yang baik merupakan aspek utama yang dibutuhkan untuk mendukung kesejahteraan hidup kita.',
-    link: 'https://ayosehat.kemkes.go.id/cara-menjaga-kesehatan-mental',
-  },  
-    {
+    link: 'https://ayosehat.kemkes.go.id/cara-menjaga-kesehatan-mental'
+  },
+  {
     id: 'a5',
     judul: 'Pentingnya Mengelola Emosi, Baik Untuk Diri Sendiri Ataupun Berkelompok',
     gambar: 'Foto/Emosi.jpg',
     deskripsi: 'Ada beberapa hal yang dapat dilakukan dalam mengelola emosi dan amarah diri yang tepat',
-    link: 'https://telemed.ihc.id/artikel-detail-534-Pentingnya-Mengelola-Emosi,-Baik-Untuk-Diri-Sendiri-Ataupun-Berkelompok.html',
-  }, 
+    link: 'https://telemed.ihc.id/artikel-detail-534-Pentingnya-Mengelola-Emosi,-Baik-Untuk-Diri-Sendiri-Ataupun-Berkelompok.html'
+  }
 ];
 
-// Data quotes motivasi
 const quotes = [
   'Kamu berharga, bahkan saat kamu merasa tidak demikian.',
   'Setiap hari adalah kesempatan baru untuk menjadi lebih baik.',
@@ -95,152 +148,498 @@ const quotes = [
   'Jangan menyerah, kamu sudah sejauh ini.',
   'Kamu pantas mendapatkan kebahagiaan dan ketenangan.'
 ];
-// Emoji lucu untuk quotes
+
 const quotesEmojis = ['😺','😸','😻','😽','😹','😆','😎','🤩','😇','🥳','😋','😜','🤗','🦄','🐧','🐼','🐣','🦊','🐻','🐶','🐱','🐰','🐵','🦥','🦙','🦩','🦋','🌈','⭐','🍀','🍉','🍦','🍩','🍕','🍔','🍟','🍿','🎉','🎈','🎵','🎨','🧸'];
-// Helper: ambil elemen by id
-function $(id) {
-  return document.getElementById(id);
+
+const dokumentasis = [
+  {
+    id: 'd1',
+    gambar: 'Foto/Melda.jpg',
+    judul: 'Konseling Self-Love',
+    deskripsi: 'Sesi konseling bersama Melda membahas pentingnya mencintai diri sendiri dan mengelola kecemasan.',
+    tanggal: 'Maret 2025'
+  },
+  {
+    id: 'd2',
+    gambar: 'Foto/Angga.jpg',
+    judul: 'Motivasi & Percaya Diri',
+    deskripsi: 'Angga memberikan sesi motivasi untuk membangun kepercayaan diri dan semangat belajar remaja.',
+    tanggal: 'April 2025'
+  },
+  {
+    id: 'd3',
+    gambar: 'Foto/Listya.jpg',
+    judul: 'Edukasi Overthinking',
+    deskripsi: 'Listia memimpin diskusi tentang cara mengenali dan mengatasi overthinking pada remaja.',
+    tanggal: 'April 2025'
+  },
+  {
+    id: 'd4',
+    gambar: 'Foto/Mengelola Stress.jpeg',
+    judul: 'Workshop Manajemen Stres',
+    deskripsi: 'Workshop interaktif tentang teknik sederhana mengelola stres sehari-hari untuk remaja.',
+    tanggal: 'Mei 2025'
+  },
+  {
+    id: 'd5',
+    gambar: 'Foto/Self Love.jpeg',
+    judul: 'Seminar Self-Love',
+    deskripsi: 'Seminar tentang pentingnya self-love dan dampak positifnya terhadap kesehatan mental.',
+    tanggal: 'Mei 2025'
+  },
+  {
+    id: 'd6',
+    gambar: 'Foto/OverThinking.jpeg',
+    judul: 'Diskusi Kesehatan Mental',
+    deskripsi: 'Forum diskusi remaja tentang kesehatan mental dan cara menjaga pikiran tetap positif.',
+    tanggal: 'Juni 2025'
+  }
+];
+
+// --- Helpers ---
+function $(id) { return document.getElementById(id); }
+
+// --- Particle System ---
+class ParticleSystem {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+    this.particles = [];
+    this.mouse = { x: null, y: null, radius: 120 };
+    this.resize();
+    this.init();
+    this.bind();
+    this.animate();
+  }
+
+  resize() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+  }
+
+  init() {
+    const count = Math.min(80, Math.floor((this.canvas.width * this.canvas.height) / 15000));
+    for (let i = 0; i < count; i++) {
+      this.particles.push({
+        x: Math.random() * this.canvas.width,
+        y: Math.random() * this.canvas.height,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6,
+        radius: Math.random() * 2 + 1,
+        alpha: Math.random() * 0.5 + 0.2
+      });
+    }
+  }
+
+  bind() {
+    window.addEventListener('resize', () => this.resize());
+    this.canvas.addEventListener('mousemove', (e) => {
+      this.mouse.x = e.clientX;
+      this.mouse.y = e.clientY;
+    });
+    this.canvas.addEventListener('mouseleave', () => {
+      this.mouse.x = null;
+      this.mouse.y = null;
+    });
+  }
+
+  animate() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    const particles = this.particles;
+    const ctx = this.ctx;
+    const mouse = this.mouse;
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+
+      // Mouse interaction
+      if (mouse.x !== null) {
+        const dx = mouse.x - p.x;
+        const dy = mouse.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          p.x -= dx * force * 0.02;
+          p.y -= dy * force * 0.02;
+        }
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(74, 158, 255, ${p.alpha})`;
+      ctx.fill();
+
+      // Connections
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const dx = p.x - p2.x;
+        const dy = p.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = `rgba(74, 158, 255, ${0.08 * (1 - dist / 150)})`;
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(() => this.animate());
+  }
 }
 
-// =====================
-// Konselor List Page
-// =====================
-if (window.location.pathname.includes('konselor.html')) {
-  const list = $("konselor-list");
+// --- Scroll Reveal (Intersection Observer) ---
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .stagger').forEach(el => {
+    observer.observe(el);
+  });
+}
+
+// --- Navbar scroll effect ---
+function initNavbar() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  const toggle = navbar.querySelector('.nav-toggle');
+  const links = navbar.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+    // Close on link click
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+      });
+    });
+  }
+}
+
+// --- Counter animation ---
+function initCounters() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target, 10);
+        if (isNaN(target)) return;
+        let current = 0;
+        const increment = Math.ceil(target / 60);
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = current;
+        }, 25);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-target]').forEach(el => observer.observe(el));
+}
+
+// ==========================================
+// Page-specific logic
+// ==========================================
+
+// --- Index Page: Dokumentasi ---
+if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
+  const list = $('dokumentasi-list');
   if (list) {
-    list.innerHTML = konselors.map(k => `
-      <div class="card-konselor fade-in">
-        <img src="${k.foto}" alt="${k.nama}" class="card-img-konselor" loading="lazy">
-        <div class="card-title-konselor">${k.nama}</div>
-        <div class="card-minat">${k.minat}</div>
-        <div class="card-bio">${k.bio}</div>
-        <div class="card-btn-konselor"><button class="btn btn-secondary" onclick="lihatProfil('${k.id}')">Lihat Profil</button></div>
+    list.innerHTML = dokumentasis.map(d => `
+      <div class="dokumentasi-card reveal">
+        <img src="${d.gambar}" alt="${d.judul}" class="dokumentasi-card-img" loading="lazy">
+        <div class="dokumentasi-card-body">
+          <div class="dokumentasi-card-title">${d.judul}</div>
+          <div class="dokumentasi-card-desc">${d.deskripsi}</div>
+          <span class="dokumentasi-card-date"><i class="fa fa-calendar" style="margin-right:0.3rem;"></i>${d.tanggal}</span>
+        </div>
       </div>
     `).join('');
   }
 }
 
-// Fungsi untuk simpan id konselor ke localStorage dan redirect
+// --- Konselor List Page ---
+if (window.location.pathname.includes('konselor.html')) {
+  const list = $('konselor-list');
+  if (list) {
+    list.className = 'card-grid stagger';
+    list.innerHTML = konselors.map(k => `
+      <div class="card">
+        <img src="${k.foto}" alt="${k.nama}" class="card-img" loading="lazy">
+        <div class="card-title">${k.nama}</div>
+        <div class="card-subtitle">${k.minat}</div>
+        <div class="card-desc">${k.bio}</div>
+        <button class="btn btn-primary" onclick="lihatProfil('${k.id}')">
+          <span>Lihat Profil</span>
+          <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    `).join('');
+    // Trigger stagger after DOM update
+    requestAnimationFrame(() => {
+      list.classList.add('visible');
+    });
+  }
+}
+
 function lihatProfil(id) {
   localStorage.setItem('konselorId', id);
   window.location.href = 'profil-konselor.html?id=' + id;
 }
 
-// =====================
-// Konselor Profile Page
-// =====================
+// --- Profil Konselor Page ---
 if (window.location.pathname.includes('profil-konselor.html')) {
-  const detail = $("profil-konselor-detail");
+  const detail = $('profil-konselor-detail');
   let id = new URLSearchParams(window.location.search).get('id') || localStorage.getItem('konselorId');
   const konselor = konselors.find(k => k.id === id);
-  // Dummy detail tambahan
+
   const pengalaman = {
     '1': 'Winner Putri Duta GenRe Undiksha 2024, RU I Duta GenRe Buleleng Putri 2025, Konselor Sebaya Forum Genre Buleleng.',
     '2': 'RU I Putra Duta GenRe Undiksha 2024, RU I Duta GenRe Buleleng Putra 2025.',
     '3': 'RU I Putri Duta GenRe Undiksha 2024, RU II Duta GenRe Buleleng Putri 2025.',
   };
   const testimoni = {
-    '1': '“Melda sangat sabar dan selalu membuat setiap orang merasa didengar.”',
-    '2': '“Angga selalu memberi motivasi yang membangun dan positif!”',
-    '3': '“Listia siap membantu menghadapi tekanan sekolah dengan cara yang sehat.”',
+    '1': '"Melda sangat sabar dan selalu membuat setiap orang merasa didengar."',
+    '2': '"Angga selalu memberi motivasi yang membangun dan positif!"',
+    '3': '"Listia siap membantu menghadapi tekanan sekolah dengan cara yang sehat."',
   };
   const wa = {
-    '1': '6289697251038',
-    '2': '628873195039',
-    '3': '6285738151143',
+    '1': '6282215682163',
+    '2': '6282340075098',
+    '3': '6282236134790',
+    '4': '6285971612749',
+    '5': '6288987237648',
+    '6': '6287883026937',
+    '7': '6283822908941',
+    '8': '6281252788139',
+    '9': '6282237995166',
+    '10': '6285858016785',
   };
+
   if (detail && konselor) {
-    const pesanWA = `Halo ${konselor.nama}, saya ingin bercerita atau konsultasi seputar kesehatan mental. Apakah bisa membantu saya?`;
+    const defaultPesan = `Halo ${konselor.nama}, saya ingin bercerita atau konsultasi seputar kesehatan mental.`;
+    const waNumber = wa[konselor.id];
+
     detail.innerHTML = `
-      <div class="profil-konselor-card fade-in">
-        <img src="${konselor.foto}" alt="${konselor.nama}" class="profil-img" loading="lazy">
-        <div class="profil-title">${konselor.nama}</div>
-        <div class="profil-minat">Minat: ${konselor.minat}</div>
-        <div class="profil-detail"><b>Usia:</b> ${konselor.usia} tahun</div>
-        <div class="profil-bio">${konselor.bio}</div>
-        <div class="profil-detail"><b>Pengalaman:</b> ${pengalaman[konselor.id]}</div>
-        <div class="profil-ig-info">Instagram: <span class='profil-ig-username'>@${konselor.instagram}</span></div>
-        <div class="profil-testimoni">${testimoni[konselor.id]}</div>
-        <div class="profil-btn-group">
-          <button class="btn btn-primary profil-btn" onclick="window.location.href='konselor.html'">Kembali</button>
-          <a class="profil-wa" href="https://wa.me/${wa[konselor.id]}?text=${encodeURIComponent(pesanWA)}" target="_blank" rel="noopener">
-            <svg viewBox="0 0 32 32"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.08 2.36 7.09L4 29l7.18-2.31A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.91-.52-5.6-1.5l-.4-.23-4.32 1.39 1.41-4.19-.26-.42A9.93 9.93 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.07-7.75c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.54-.01-.19 0-.5.07-.76.36-.26.28-1 1-.97 2.43.03 1.43 1.03 2.81 1.18 3.01.14.2 2.03 3.1 4.93 4.22.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
-            Cerita via WhatsApp
-          </a>
+      <div class="profil-layout">
+        <div class="profil-card reveal visible" style="transition:none;">
+          <img src="${konselor.foto}" alt="${konselor.nama}" class="profil-img" loading="lazy">
+          <div class="profil-title">${konselor.nama}</div>
+          <div class="profil-minat"><i class="fa fa-heart" style="color:var(--accent);margin-right:0.4rem;"></i>${konselor.minat}</div>
+          <div class="profil-detail"><b>Usia:</b> ${konselor.usia} tahun</div>
+          <div class="profil-bio">${konselor.bio}</div>
+          <div class="profil-detail"><b>Pengalaman:</b> ${pengalaman[konselor.id]}</div>
+          <div class="profil-ig-info">Instagram: <span class="profil-ig-username">@${konselor.instagram}</span></div>
+          <div class="profil-testimoni">${testimoni[konselor.id]}</div>
+          <div class="profil-btn-group">
+            <button class="btn btn-primary btn-glow" onclick="bukaModal('${konselor.nama}', '${waNumber}')">
+              <i class="fa fa-whatsapp"></i>
+              <span>Konseling</span>
+            </button>
+            <button class="btn btn-secondary" onclick="window.location.href='konselor.html'">
+              <i class="fa fa-arrow-left"></i>
+              <span>Kembali</span>
+            </button>
+          </div>
+          <div class="profil-privasi">
+            <i class="fa fa-lock" style="margin-right:0.4rem;"></i>
+            Cerita yang kamu bagikan bersifat <b>rahasia</b> dan tidak akan disebarluaskan.
+          </div>
         </div>
-        <div class="profil-privasi">🔒 Cerita yang kamu bagikan bersifat <b>rahasia</b> dan tidak akan disebarluaskan. Konselor kami berkomitmen menjaga privasi dan kenyamananmu.</div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal-overlay" id="modal-wa">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h3>Kirim Pesan ke <span id="modal-nama-konselor">${konselor.nama}</span></h3>
+            <button class="modal-close" onclick="tutupModal()">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p class="form-subtitle">Isi form di bawah untuk memulai percakapan via WhatsApp.</p>
+            <form id="form-konseling" onsubmit="return kirimWA(event)">
+              <div class="form-group">
+                <label class="form-label" for="form-nama">Nama Kamu</label>
+                <input class="form-input" type="text" id="form-nama" name="nama" placeholder="Masukkan namamu..." required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="form-pesan">Pesan</label>
+                <textarea class="form-textarea" id="form-pesan" name="pesan" placeholder="Ceritakan apa yang kamu rasakan..." required>${defaultPesan}</textarea>
+              </div>
+              <button type="submit" class="btn btn-wa form-submit">
+                <i class="fa fa-whatsapp"></i>
+                <span>Kirim</span>
+              </button>
+            </form>
+            <p class="form-info">
+              <i class="fa fa-lock"></i>Pesan kamu akan dikirim langsung via WhatsApp. Identitas kamu aman dan dirahasiakan.
+            </p>
+          </div>
+        </div>
       </div>
     `;
   } else if (detail) {
-    detail.innerHTML = '<p>Konselor tidak ditemukan.</p>';
+    detail.innerHTML = '<div class="profil-card"><p style="color:var(--text-secondary);">Konselor tidak ditemukan.</p></div>';
   }
 }
 
-// =====================
-// Artikel & Tips Page
-// =====================
+let waTarget = '';
+
+function bukaModal(nama, waNumber) {
+  waTarget = waNumber;
+  document.getElementById('modal-nama-konselor').textContent = nama;
+  document.getElementById('form-nama').value = '';
+  document.getElementById('form-pesan').value = ''
+  document.getElementById('modal-wa').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modal-wa').onclick = function(e) {
+    if (e.target === this) tutupModal();
+  };
+}
+
+function tutupModal() {
+  document.getElementById('modal-wa').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') tutupModal();
+});
+
+function kirimWA(event) {
+  event.preventDefault();
+  const nama = document.getElementById('form-nama').value.trim();
+  const pesan = document.getElementById('form-pesan').value.trim();
+  if (!nama || !pesan || !waTarget) return false;
+  const text = 'Halo, saya ' + nama + '. ' + pesan;
+  window.open('https://wa.me/' + waTarget + '?text=' + encodeURIComponent(text), '_blank');
+  tutupModal();
+  return false;
+}
+
+// --- Artikel Page ---
 if (window.location.pathname.includes('artikel.html')) {
-  const list = $("artikel-list");
+  const list = $('artikel-list');
   if (list) {
+    list.className = 'card-grid stagger';
     list.innerHTML = artikels.map(a => `
-      <div class="card fade-in">
-        <img src="${a.gambar}" alt="${a.judul}" class="card-img" style="width:100px;height:100px;border-radius:16px;object-fit:cover;">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="${a.gambar}" alt="${a.judul}" class="card-img--landscape" loading="lazy">
+        </div>
         <div class="card-title">${a.judul}</div>
         <div class="card-desc">${a.deskripsi}</div>
-        <a href="${a.link}" class="btn btn-secondary card-btn" target="_blank" rel="noopener">Baca Selengkapnya</a>
+        <a href="${a.link}" class="btn btn-secondary" target="_blank" rel="noopener">
+          <span>Baca Selengkapnya</span>
+          <i class="fa fa-external-link-alt"></i>
+        </a>
       </div>
     `).join('');
+    requestAnimationFrame(() => {
+      list.classList.add('visible');
+    });
   }
 }
 
-// =====================
-// Quotes Page
-// =====================
+// --- Quotes Page ---
 if (window.location.pathname.includes('quotes.html')) {
-  const quoteText = $("quote-text");
-  const btn = $("new-quote-btn");
-  const emoji = $("quotes-emoji");
+  const quoteText = $('quote-text');
+  const btn = $('new-quote-btn');
+  const emoji = $('quotes-emoji');
+
   function tampilkanQuote() {
     const idx = Math.floor(Math.random() * quotes.length);
     const eidx = Math.floor(Math.random() * quotesEmojis.length);
-    // Animasi keluar
-    quoteText.style.opacity = 0;
-    emoji.style.opacity = 0;
+
+    if (quoteText) {
+      quoteText.style.opacity = '0';
+      quoteText.style.transform = 'translateY(20px) scale(0.95)';
+    }
+    if (emoji) {
+      emoji.style.opacity = '0';
+      emoji.style.transform = 'scale(0.5) rotate(-20deg)';
+    }
+
     setTimeout(() => {
-      quoteText.textContent = quotes[idx];
-      emoji.textContent = quotesEmojis[eidx];
-      // Animasi masuk
-      quoteText.classList.remove('quotes-text-anim');
-      void quoteText.offsetWidth;
-      quoteText.classList.add('quotes-text-anim');
-      emoji.classList.remove('quotes-emoji-anim');
-      void emoji.offsetWidth;
-      emoji.classList.add('quotes-emoji-anim');
-      quoteText.style.opacity = 1;
-      emoji.style.opacity = 1;
-    }, 180);
+      if (quoteText) {
+        quoteText.textContent = quotes[idx];
+        quoteText.style.opacity = '1';
+        quoteText.style.transform = 'translateY(0) scale(1)';
+      }
+      if (emoji) {
+        emoji.textContent = quotesEmojis[eidx];
+        emoji.style.opacity = '1';
+        emoji.style.transform = 'scale(1) rotate(0deg)';
+      }
+    }, 250);
   }
+
   if (quoteText && btn && emoji) {
     tampilkanQuote();
-    btn.onclick = () => {
-      tampilkanQuote();
-    };
+    btn.onclick = tampilkanQuote;
   }
 }
 
-// =====================
-// Animasi Scroll Ringan
-// =====================
-// Fade-in saat elemen masuk viewport
-function handleScrollAnim() {
-  const faders = document.querySelectorAll('.fade-in');
-  const trigger = window.innerHeight * 0.92;
-  faders.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < trigger) {
-      el.style.animationPlayState = 'running';
-    }
+// ==========================================
+// Init on DOM ready
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  initScrollReveal();
+  initNavbar();
+  initCounters();
+  initRipple();
+
+  // Particle system for pages that have the canvas
+  const canvas = document.getElementById('particle-canvas');
+  if (canvas) {
+    new ParticleSystem(canvas);
+  }
+});
+
+// --- Ripple Effect ---
+function initRipple() {
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const rect = this.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
   });
 }
-window.addEventListener('scroll', handleScrollAnim);
-window.addEventListener('DOMContentLoaded', handleScrollAnim); 
