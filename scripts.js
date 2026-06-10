@@ -11,7 +11,7 @@ const konselors = [
     minat: 'Self-love, Kecemasan, Persahabatan',
     bio: 'Sukkun adalah konselor sebaya yang dikenal hangat dan penuh empati. Ia senang menjadi pendengar yang baik dan hadir untuk membantu remaja melewati berbagai tantangan hidup. Bagi Sukkun, setiap orang berhak merasa didengar, dimengerti, dan meraih kebahagiaan dalam hidupnya.',
     usia: 20,
-    instagram: '@raygar28_'
+    instagram: 'raygar28_'
   },
   {
     id: '2',
@@ -20,6 +20,7 @@ const konselors = [
     minat: 'Motivasi, Keluarga, Percaya Diri',
     bio: 'Silviana aktif di forum GenRe Buleleng dan senang berbagi tips seputar membangun kepercayaan diri. Ia dikenal sebagai pribadi yang ramah, mudah diajak bicara, dan selalu berusaha menjadi pendengar yang baik. Silviana siap menjadi teman cerita yang suportif, hadir untuk mendengarkan tanpa menghakimi dan menemani dengan tulus.',
     usia: 20,
+    instagram: 'silvianadarini'
   },
   {
     id: '3',
@@ -28,6 +29,7 @@ const konselors = [
     minat: 'Overthinking, Akademik, Hubungan',
     bio: 'Bayu memahami betul tantangan yang sering dihadapi remaja, mulai dari tekanan akademik hingga masalah dalam hubungan pertemanan atau asmara. Ia ingin menjadi tempat bercerita yang nyaman dan membantu remaja menemukan solusi yang sehat, positif, dan sesuai dengan diri mereka sendiri.',
     usia: 20,
+    instagram: 'bayuwiguna'
   },
   {
     id: '4',
@@ -36,6 +38,7 @@ const konselors = [
     minat: 'mental health, pertemanan, kesehatan reproduksi',
     bio: 'komang murniasih adalah seorang konselor yang memiliki pengalaman dalam membantu remaja menghadapi tekanan akademik dan masalah hubungan. Ia dikenal sebagai pribadi yang sabar, penuh pengertian, dan selalu berusaha memberikan dukungan yang positif. Komang siap menjadi teman cerita yang dapat diandalkan untuk mendengarkan dan memberikan solusi yang sehat bagi remaja.',
     usia: 19,
+    instagram: 'murniasih'
   },
   {
     id: '5',
@@ -44,6 +47,7 @@ const konselors = [
     minat: 'kesehatan reproduksi, seksualitas,hubungan',
     bio: 'Dayana adalah seorang konselor yang sudah berpengalaman dalam membantu remaja mengatasi kesehatan reprodusi remaja. Ia dikenal sebagai pribadi yang ramah, mudah diajak bicara, dan selalu berusaha menjadi pendengar yang baik. Dayana siap menjadi teman cerita yang suportif, hadir untuk mendengarkan tanpa menghakimi dan menemani dengan tulus.',
     usia: 17,
+    instagram: 'dayanamahendra'
   },
   {
     id: '6',
@@ -52,6 +56,7 @@ const konselors = [
     minat: 'sharing cerita, kesehatan mental hubungan, lingkungan sosial',
     bio: 'Melyn Agustin adalah seorang konselor yang memiliki pengalaman dalam membantu remaja menghadapi berbagai tantangan hidup. Ia dikenal sebagai pribadi yang sabar, penuh pengertian, dan selalu berusaha memberikan dukungan yang positif. Melyn siap menjadi teman cerita yang dapat diandalkan untuk mendengarkan dan memberikan solusi yang sehat bagi remaja.',
     usia: 19,
+    instagram: 'melynnagustin'
   },
   {
     id: '7',
@@ -60,6 +65,7 @@ const konselors = [
     minat: 'pressure akademik, pola hidup sehat, hubungan',
     bio: 'Ketut Putriani adalah seorang konselor yang suka membantu remaja menghadapi tekanan akademik dan masalah hubungan. Ia dikenal sebagai pribadi yang sabar, penuh pengertian, dan selalu berusaha memberikan dukungan yang positif. Ketut siap menjadi teman cerita yang dapat diandalkan untuk mendengarkan dan memberikan solusi yang sehat bagi remaja.',
     usia: 17,
+    instagram: 'ketutputriani'
   },
   {
     id: '8',
@@ -68,6 +74,7 @@ const konselors = [
     minat: 'pacaran sehat, pencegahan pernikahan dini, napza',
     bio: 'Ayu Nataya adalah seorang konselor yang memiliki berbagai pengalaman dalam membantu upaya pencegahan pernikahan dini dan napza',
     usia: 18,
+    instagram: 'ayunataya'
   },
   {
     id: '9',
@@ -76,6 +83,7 @@ const konselors = [
     minat: 'bullying, kesehatan mental, cyberbullying',
     bio: 'Galang Okta adalah seorang konselor yang memiliki pengalaman dalam membantu menangani bullying',  
     usia: 17,
+    instagram: 'galangokta'
   },
   {
     id: '10',
@@ -84,6 +92,7 @@ const konselors = [
     minat: 'Karir, pengembangan diri, perencanaan masa depan',
     bio: 'jyoti wedastri adalah seorang konselor yang memiliki pengalaman dalam perencanaan karir dan pengambangan diri remaja',
     usia: 17,
+    instagram: 'jyotiwedastri'
   }
 ];
 
@@ -154,23 +163,23 @@ const quotesEmojis = ['😺','😸','😻','😽','😹','😆','😎','🤩','�
 const dokumentasis = [
   {
     id: 'd1',
-    gambar: 'Foto/Melda.jpg',
+    gambar: 'Foto/raygar.jpeg',
     judul: 'Konseling Self-Love',
-    deskripsi: 'Sesi konseling bersama Melda membahas pentingnya mencintai diri sendiri dan mengelola kecemasan.',
+    deskripsi: 'Sesi konseling membahas pentingnya mencintai diri sendiri dan mengelola kecemasan.',
     tanggal: 'Maret 2025'
   },
   {
     id: 'd2',
-    gambar: 'Foto/Angga.jpg',
+    gambar: 'Foto/ana.jpeg',
     judul: 'Motivasi & Percaya Diri',
-    deskripsi: 'Angga memberikan sesi motivasi untuk membangun kepercayaan diri dan semangat belajar remaja.',
+    deskripsi: 'Sesi motivasi untuk membangun kepercayaan diri dan semangat belajar remaja.',
     tanggal: 'April 2025'
   },
   {
     id: 'd3',
-    gambar: 'Foto/Listya.jpg',
+    gambar: 'Foto/bayu.jpeg',
     judul: 'Edukasi Overthinking',
-    deskripsi: 'Listia memimpin diskusi tentang cara mengenali dan mengatasi overthinking pada remaja.',
+    deskripsi: 'Diskusi tentang cara mengenali dan mengatasi overthinking pada remaja.',
     tanggal: 'April 2025'
   },
   {
@@ -428,11 +437,25 @@ if (window.location.pathname.includes('profil-konselor.html')) {
     '1': 'Winner Putri Duta GenRe Undiksha 2024, RU I Duta GenRe Buleleng Putri 2025, Konselor Sebaya Forum Genre Buleleng.',
     '2': 'RU I Putra Duta GenRe Undiksha 2024, RU I Duta GenRe Buleleng Putra 2025.',
     '3': 'RU I Putri Duta GenRe Undiksha 2024, RU II Duta GenRe Buleleng Putri 2025.',
+    '4': 'Aktif dalam kegiatan konseling sebaya dan pendampingan remaja di lingkungan sekolah dan komunitas.',
+    '5': 'Berpengalaman dalam edukasi kesehatan reproduksi remaja dan pendampingan sebaya.',
+    '6': 'Terlibat aktif dalam forum diskusi remaja dan kegiatan pengembangan diri.',
+    '7': 'Berpengalaman dalam pendampingan akademik dan konseling sebaya di lingkungan sekolah.',
+    '8': 'Aktif dalam kegiatan pencegahan pernikahan dini dan edukasi napza di kalangan remaja.',
+    '9': 'Berpengalaman dalam menangani kasus bullying dan cyberbullying di lingkungan sekolah.',
+    '10': 'Aktif dalam kegiatan pengembangan karir dan perencanaan masa depan untuk remaja.',
   };
   const testimoni = {
-    '1': '"Melda sangat sabar dan selalu membuat setiap orang merasa didengar."',
-    '2': '"Angga selalu memberi motivasi yang membangun dan positif!"',
-    '3': '"Listia siap membantu menghadapi tekanan sekolah dengan cara yang sehat."',
+    '1': '"Sukkun sangat sabar dan selalu membuat setiap orang merasa didengar."',
+    '2': '"Silviana selalu memberi motivasi yang membangun dan positif!"',
+    '3': '"Bayu siap membantu menghadapi tekanan sekolah dengan cara yang sehat."',
+    '4': '"Murniasih adalah pendengar yang hangat dan sangat membantu saya melewati masa sulit."',
+    '5': '"Dayana memberikan perspektif baru yang membuat saya lebih percaya diri."',
+    '6': '"Melyn membuat saya nyaman bercerita dan tidak pernah menghakimi."',
+    '7': '"Putriani sangat perhatian dan membantu saya mengatasi tekanan akademik."',
+    '8': '"Nataya memberikan informasi yang sangat bermanfaat tentang pencegahan pernikahan dini."',
+    '9': '"Galang membantu saya berani melawan bullying dan lebih percaya diri."',
+    '10': '"Jyoti membantu saya menemukan arah karir dan masa depan yang lebih jelas."',
   };
   const wa = {
     '1': '6282215682163',
@@ -520,7 +543,7 @@ function bukaModal(nama, waNumber) {
   waTarget = waNumber;
   document.getElementById('modal-nama-konselor').textContent = nama;
   document.getElementById('form-nama').value = '';
-  document.getElementById('form-pesan').value = ''
+  document.getElementById('form-pesan').value = '' ;
   document.getElementById('modal-wa').classList.add('open');
   document.body.style.overflow = 'hidden';
   document.getElementById('modal-wa').onclick = function(e) {
@@ -618,8 +641,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initNavbar();
   initCounters();
-  initRipple();
-
   // Particle system for pages that have the canvas
   const canvas = document.getElementById('particle-canvas');
   if (canvas) {
@@ -627,19 +648,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// --- Ripple Effect ---
-function initRipple() {
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      const rect = this.getBoundingClientRect();
-      const ripple = document.createElement('span');
-      ripple.className = 'ripple';
-      const size = Math.max(rect.width, rect.height);
-      ripple.style.width = ripple.style.height = size + 'px';
-      ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
-      ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
-      this.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 600);
-    });
-  });
-}
