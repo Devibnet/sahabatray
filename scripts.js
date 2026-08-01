@@ -132,6 +132,34 @@ const artikels = [
     gambar: 'Foto/Emosi.jpg',
     deskripsi: 'Ada beberapa hal yang dapat dilakukan dalam mengelola emosi dan amarah diri yang tepat',
     link: 'https://telemed.ihc.id/artikel-detail-534-Pentingnya-Mengelola-Emosi,-Baik-Untuk-Diri-Sendiri-Ataupun-Berkelompok.html'
+  },
+  {
+    id: 'a6',
+    judul: 'Dampak Napza',
+    gambar: 'Foto/dampaknapza.jpeg',
+    deskripsi: 'Ada beberapa dampa negatifyang dapat ditimbulkan akibat penggunaan NAPZA',
+    link: 'https://www.halodoc.com/artikel/ini-dampak-negatif-penggunaan-narkoba-bagi-generasi-muda?srsltid=AfmBOoqL8GvWsd3PNXPtH4_qusXrveTrJqpIO2RPAMUWZe4LVanyDpDF'
+  },
+  {
+    id: 'a7',
+    judul: 'Jenis napza',
+    gambar: 'Foto/jenisnapza.jpeg',
+    deskripsi: 'Ada beberapa jenis napza yang perlu dietahui agar dapat menghindari nya',
+    link: 'https://www.alodokter.com/napza-ini-jenis-dan-bahayanya-bagi-kesehatan'
+  },
+  {
+    id: 'a8',
+    judul: 'Cara menjauh dari napza',
+    gambar: 'Foto/jauhnapza.jpeg',
+    deskripsi: 'Ada beberapa cara yang dapat dilakukan untuk menjauh dari dampak negatif NAPZA',
+    link: 'https://www.alodokter.com/pencegahan-narkoba-langkah-efektif-melindungi-diri-dan-keluarga'
+  },
+  {
+    id: 'a9',
+    judul: 'Contoh napza',
+    gambar: 'Foto/contohnapza.jpeg',
+    deskripsi: 'Ada beberapa contoh napza yang perlu diketahui agar dapat menghindarinya',
+    link: 'https://www.halodoc.com/artikel/yuk-pahami-contoh-napza-jenis-dan-penggolongan-lengkap?srsltid=AfmBOoqq7PvBjaf-Ll1NCWiUiuTuqTTVnoiNRaUQ2IZ4JLD4MHIfTy0P'
   }
 ];
 
@@ -163,45 +191,39 @@ const quotesEmojis = ['😺','😸','😻','😽','😹','😆','😎','🤩','�
 const dokumentasis = [
   {
     id: 'd1',
-    gambar: 'Foto/raygar.jpeg',
-    judul: 'Konseling Self-Love',
-    deskripsi: 'Sesi konseling membahas pentingnya mencintai diri sendiri dan mengelola kecemasan.',
-    tanggal: 'Maret 2025'
+    gambar: 'Foto/smanser.jpeg',
+    judul: 'Sosialisasi Napza dan Pernikahan dini',
+    tanggal: '9 Maret 2026'
   },
   {
     id: 'd2',
-    gambar: 'Foto/ana.jpeg',
-    judul: 'Motivasi & Percaya Diri',
-    deskripsi: 'Sesi motivasi untuk membangun kepercayaan diri dan semangat belajar remaja.',
-    tanggal: 'April 2025'
+    gambar: 'Foto/santo.jpeg',
+    judul: 'Sosialisasi Materi Kenakalan remaja dan bullying',
+    tanggal: '11 Maret 2026'
   },
   {
     id: 'd3',
-    gambar: 'Foto/bayu.jpeg',
-    judul: 'Edukasi Overthinking',
-    deskripsi: 'Diskusi tentang cara mengenali dan mengatasi overthinking pada remaja.',
-    tanggal: 'April 2025'
+    gambar: 'Foto/kedasih.jpeg',
+    judul: 'Diskusi Materi: Kekerasan seksual',
+    tanggal: '23 April 2026'
   },
   {
     id: 'd4',
-    gambar: 'Foto/Mengelola Stress.jpeg',
-    judul: 'Workshop Manajemen Stres',
-    deskripsi: 'Workshop interaktif tentang teknik sederhana mengelola stres sehari-hari untuk remaja.',
-    tanggal: 'Mei 2025'
+    gambar: 'Foto/undiksha.jpeg',
+    judul: 'Workshop Digital Remaja',
+    tanggal: '11 Mei 2026'
   },
   {
     id: 'd5',
-    gambar: 'Foto/Self Love.jpeg',
-    judul: 'Seminar Self-Love',
-    deskripsi: 'Seminar tentang pentingnya self-love dan dampak positifnya terhadap kesehatan mental.',
-    tanggal: 'Mei 2025'
+    gambar: 'Foto/stikes.jpeg',
+    judul: 'Audiensi pembentukan PIK-M Binaan',
+    tanggal: '13 Mei 2026'
   },
   {
     id: 'd6',
-    gambar: 'Foto/OverThinking.jpeg',
-    judul: 'Diskusi Kesehatan Mental',
-    deskripsi: 'Forum diskusi remaja tentang kesehatan mental dan cara menjaga pikiran tetap positif.',
-    tanggal: 'Juni 2025'
+    gambar: 'Foto/smk.jpeg',
+    judul: 'Workshop kesehatan mental smk kesehatan usadha',
+    tanggal: '28 Juli 2026'
   }
 ];
 
@@ -390,7 +412,6 @@ if (window.location.pathname.endsWith('index.html') || window.location.pathname 
         <img src="${d.gambar}" alt="${d.judul}" class="dokumentasi-card-img" loading="lazy">
         <div class="dokumentasi-card-body">
           <div class="dokumentasi-card-title">${d.judul}</div>
-          <div class="dokumentasi-card-desc">${d.deskripsi}</div>
           <span class="dokumentasi-card-date"><i class="fa fa-calendar" style="margin-right:0.3rem;"></i>${d.tanggal}</span>
         </div>
       </div>
@@ -482,7 +503,6 @@ if (window.location.pathname.includes('profil-konselor.html')) {
           <div class="profil-minat"><i class="fa fa-heart" style="color:var(--accent);margin-right:0.4rem;"></i>${konselor.minat}</div>
           <div class="profil-detail"><b>Usia:</b> ${konselor.usia} tahun</div>
           <div class="profil-bio">${konselor.bio}</div>
-          <div class="profil-detail"><b>Pengalaman:</b> ${pengalaman[konselor.id]}</div>
           <div class="profil-ig-info">Instagram: <span class="profil-ig-username">@${konselor.instagram}</span></div>
           <div class="profil-testimoni">${testimoni[konselor.id]}</div>
           <div class="profil-btn-group">
